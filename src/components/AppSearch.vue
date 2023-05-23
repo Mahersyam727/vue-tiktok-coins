@@ -1,30 +1,21 @@
 <template>
   <div class="tiktok-1x100u9-DivHeaderCenterContainer e10c4g870">
     <div class="tiktok-thiumz-DivSearchFormContainer eagc08l0">
-      <form
-        class="search-input tiktok-dhqzc6-FormElement ev30f210"
-        action="/search"
-      >
+      <form class="search-input tiktok-dhqzc6-FormElement ev30f210">
         <input
-          placeholder="Поиск"
+          placeholder="Search"
           name="q"
           type="search"
           autocomplete="off"
           role="combobox"
           aria-controls=""
-          aria-label="Поиск"
           aria-expanded="false"
           aria-autocomplete="list"
           data-e2e="search-user-input"
           class="tiktok-fkcqlv-InputElement ev30f212"
           value=""
         /><span class="tiktok-hck1rr-SpanSpliter ev30f215"></span
-        ><button
-          type="submit"
-          aria-label="Поиск"
-          data-e2e="search-button"
-          class="tiktok-laero7-ButtonSearch ev30f216"
-        >
+        ><button class="tiktok-laero7-ButtonSearch ev30f216">
           <div class="tiktok-17iic05-DivSearchIconContainer ev30f217">
             <svg
               width="24"
