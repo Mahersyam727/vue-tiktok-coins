@@ -1,10 +1,9 @@
 <script>
 import debounce from '../utils/debounce';
-import axios from 'axios';
 export default {
   data() {
     return {
-      query: 'kurwa',
+      query: '',
       searchData: '',
     };
   },
