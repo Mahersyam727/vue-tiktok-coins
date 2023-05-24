@@ -205,6 +205,7 @@ export default {
           <app-input-card
             @click="selected = cards.length"
             :selected="selected === cards.length"
+            :price="price"
             @input="value = $event"
           />
         </ol>

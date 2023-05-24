@@ -5,6 +5,7 @@ export default {
       type: Boolean,
       default: false,
     },
+    price: { type: Number, required: true },
   },
   emits: {
     input: null,
@@ -82,7 +83,16 @@ export default {
         <span
           data-e2e="wallet-package-text-custom"
           class="tiktok-xo7i9f-SpanTextNow e4yj8b66"
-          >{{ selected ? '30–2,500,000' : 'Support for large sums' }}</span
+          >{{
+            selected
+              ? price
+                ? price.toLocaleString('en', {
+                    style: 'currency',
+                    currency: 'EUR',
+                  })
+                : '30–2,500,000'
+              : 'Support for large sums'
+          }}</span
         >
       </div>
     </button>
