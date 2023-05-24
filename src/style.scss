@@ -699,11 +699,14 @@ a[href]:focus {
 /*! CSS Used from: Embedded */
 .tiktok-lp888x-DivContentContainer {
   box-sizing: border-box;
-  width: calc(100% - 144px);
-  min-width: 400px;
   height: 100%;
   border-radius: 8px;
   padding: 32px 0px;
+  @media screen and (min-width: 425px) {
+    width: calc(100% - 144px);
+    min-width: 400px;
+  }
+  width: calc(100% - 2rem);
 }
 
 @media (min-width: 1160px) {

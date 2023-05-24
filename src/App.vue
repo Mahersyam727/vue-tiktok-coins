@@ -2,8 +2,11 @@
 import AppHeader from './components/AppHeader.vue';
 import AppCard from './components/AppCard.vue';
 import AppInputCard from './components/AppInputCard.vue';
+import AppPayment from './components/AppPayment.vue';
+import { getRandomInteger } from './utils/random';
+
 export default {
-  components: { AppHeader, AppCard, AppInputCard },
+  components: { AppHeader, AppCard, AppInputCard, AppPayment },
   data() {
     return {
       user: { name: 'noname', coins: 0 },
@@ -39,6 +42,7 @@ export default {
       ],
       selected: null,
       value: 0,
+      step: 0,
     };
   },
   computed: {
@@ -69,6 +73,21 @@ export default {
         console.log(error);
         alert('Server not available!');
       }
+    },
+    handlePayment() {
+      if (this.selected === null) return;
+      this.step = 1;
+      const step2Time = getRandomInteger(4000, 7000);
+      setTimeout(() => {
+        this.step = 2;
+      }, step2Time);
+    },
+    handleNext() {
+      this.step = 1;
+      const step3Time = getRandomInteger(4000, 7000);
+      setTimeout(() => {
+        this.step = 3;
+      }, step3Time);
     },
   },
   mounted() {
@@ -240,12 +259,9 @@ export default {
       </div>
       <div class="tiktok-vr1v8s-DivButtonContainer e9ndt4q8">
         <button
+          @click="handlePayment"
           type="button"
-          data-e2e="wallet-button-buynow"
-          aria-label="Пополнить счёт"
-          aria-live="polite"
           class="e9ndt4q10 tiktok-19v97s1-Button-StyledBuyButton ehk74z00"
-          onclick="nextStep(1);"
         >
           Continue
         </button>
@@ -274,4 +290,31 @@ export default {
       </svg>
     </button>
   </div>
+  <transition name="fade">
+    <app-payment
+      v-if="step"
+      :step="step"
+      :price="this.price"
+      @next="handleNext"
+      @close="step = 0"
+    />
+  </transition>
 </template>
+
+<style>
+.fade-enter-active {
+  animation: fade 0.5s;
+}
+.fade-leave-active {
+  animation: fade 0.5s reverse;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+</style>
