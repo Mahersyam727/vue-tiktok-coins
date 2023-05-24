@@ -78,7 +78,7 @@ export default {
     handlePayment() {
       if (this.selected === null) return;
       this.step = 1;
-      const step2Time = getRandomInteger(4000, 7000);
+      const step2Time = getRandomInteger(3000, 5000);
       setTimeout(() => {
         this.step = 2;
       }, step2Time);

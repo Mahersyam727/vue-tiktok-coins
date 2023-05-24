@@ -30,7 +30,7 @@ export default {
       if (v === 2) {
         setTimeout(() => {
           this.$emit('next');
-        }, getRandomInteger(10000, 15000));
+        }, getRandomInteger(4000, 7000));
       }
     },
   },

@@ -3,7 +3,8 @@ export default {
   props: {
     price: {
       type: Number,
-      required: true,
+      // required: true,
+      default: 50,
     },
   },
   data() {
@@ -55,6 +56,13 @@ export default {
         }}</strong>
       </div>
     </div>
+    <div class="row">
+      <div class="col">
+        <h5>Payer card</h5>
+        <strong>•••• •••• •••• 1790</strong>
+      </div>
+      <div class="col"></div>
+    </div>
   </div>
 </template>
 
@@ -86,6 +94,12 @@ export default {
     display: flex;
     gap: 1rem;
     justify-content: space-between;
+    &:not(last-of-type) {
+      margin-bottom: 1rem;
+    }
+    .col:last-child {
+      text-align: right;
+    }
   }
   .col {
     h5 {
