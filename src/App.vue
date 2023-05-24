@@ -62,6 +62,7 @@ export default {
   methods: {
     async fetchUserData() {
       try {
+        // API PATH
         const { name, coins } = await fetch('/api/get_user.php').then((res) =>
           res.json()
         );
@@ -123,6 +124,7 @@ export default {
               data-e2e="profile-icon"
               class="tiktok-1igqi6u-DivProfileContainer efubjyv0 imageInCssJs"
             >
+              <!-- API PATH -->
               <img src="/api/data/image.png" alt="" />
             </div>
             <div class="tiktok-9l16e2-DivNameCoinInfo e14cybcq10">
