@@ -402,6 +402,9 @@ a[href]:focus {
 /*! CSS Used from: Embedded */
 .tiktok-1x100u9-DivHeaderCenterContainer {
   position: relative;
+  margin: 0 2rem;
+  max-width: 425px;
+  width: 100%;
 }
 
 @media screen and (max-width: 767px) {
@@ -413,6 +416,7 @@ a[href]:focus {
 /*! CSS Used from: Embedded */
 .tiktok-thiumz-DivSearchFormContainer {
   position: relative;
+  width: 100%;
 }
 
 /*! CSS Used from: Embedded */
@@ -435,10 +439,13 @@ a[href]:focus {
   overflow: hidden;
   z-index: 1;
   margin: 0;
+  max-width: 425px;
+  width: 100%;
 }
 
 /*! CSS Used from: Embedded */
 .tiktok-fkcqlv-InputElement {
+  min-width: 0;
   font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -447,7 +454,7 @@ a[href]:focus {
   background: transparent;
   outline: none;
   padding: 0;
-  width: 346px;
+  width: 100%;
   color: rgba(22, 24, 35, 1);
   caret-color: rgba(254, 44, 85, 1);
   -webkit-appearance: textfield;
